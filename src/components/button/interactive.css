@@ -1,0 +1,31 @@
+.button {
+  transition-property: var(--transition-property-default);
+  transition-timing-function: var(--transition-timing-function-in-out);
+  transition-duration: var(--default-transition-duration);
+
+  &:disabled {
+    opacity: var(--button-disabled-opacity);
+    cursor: not-allowed;
+  }
+
+  &:is([href], button, [role="button"], input) {
+    cursor: var(--cursor-pointer);
+
+    &:hover {
+      @media (hover: hover) and (pointer: fine) {
+        --button-background-color-mix: var(--button-hover-background-color-mix);
+        --button-background-color-opacity: var(--button-hover-background-color-opacity);
+      }
+    }
+
+    &:focus {
+      --button-outline-offset: var(--button-focus-outline-offset);
+      --button-outline-color-opacity: var(--button-focus-outline-color-opacity);
+    }
+
+    &:is(:active, :checked, .active) {
+      --button-background-color-mix: var(--button-active-background-color-mix);
+      --button-background-color-opacity: var(--button-active-background-color-opacity);
+    }
+  }
+}

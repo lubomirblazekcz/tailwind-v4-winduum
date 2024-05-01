@@ -1,0 +1,10 @@
+:root, :host {
+  --button-border-radius: var(--radius-xl);
+  --button-font-size: var(--font-size-sm);
+  --button-font-weight: var(--font-weight-medium);
+  --button-gap: var(--spacing-sm);
+  --button-outline-width: 2px;
+  --button-height: 2.25rem;
+  --button-py: 0.375rem;
+  --button-px: 0.75rem;
+}
