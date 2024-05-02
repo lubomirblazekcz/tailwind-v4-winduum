@@ -1,11 +1,11 @@
-.button:is(.ghosted) {
-  --button-disabled-background-color-opacity: 0%;
+.button:is(.muted) {
+  --button-disabled-background-color-opacity: 5%;
   --button-disabled-color: var(--color-accent);
-  --button-hover-background-color-opacity: 10%;
+  --button-hover-background-color-opacity: 20%;
   --button-hover-color: var(--color-accent);
-  --button-active-background-color-opacity: 20%;
+  --button-active-background-color-opacity: 30%;
   --button-active-color: var(--color-accent);
   --button-focus-outline-offset: -2px;
   --button-color: var(--color-accent);
-  --button-background-color-opacity: 0%;
+  --button-background-color-opacity: 10%;
 }

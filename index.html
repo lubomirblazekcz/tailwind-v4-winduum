@@ -7,12 +7,46 @@
     <title>Vite App</title>
     <link rel="stylesheet" href="/src/main.css" />
   </head>
-  <body class="p-8">
-    <button class="button">
-      Button
-    </button>
-    <button class="button ghosted">
-      Button
-    </button>
+  <body class="p-8 flex flex-col gap-2">
+    <div>
+      <button class="button">
+        Button
+      </button>
+      <button class="button ghosted">
+        Button
+      </button>
+      <button class="button muted">
+        Button
+      </button>
+      <button class="button bordered">
+        Button
+      </button>
+      <button class="button bordered text-main disabled:text-main/75">
+        Button
+      </button>
+      <button class="button raised">
+        Button
+      </button>
+    </div>
+    <div>
+      <button class="button" disabled>
+        Button
+      </button>
+      <button class="button ghosted" disabled>
+        Button
+      </button>
+      <button class="button muted" disabled>
+        Button
+      </button>
+      <button class="button bordered" disabled>
+        Button
+      </button>
+      <button class="button bordered text-main disabled:text-main/75" disabled>
+        Button
+      </button>
+      <button class="button raised" disabled>
+        Button
+      </button>
+    </div>
   </body>
 </html>

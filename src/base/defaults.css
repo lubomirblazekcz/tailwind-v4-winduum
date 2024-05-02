@@ -6,8 +6,8 @@
 :where(button:enabled),
 :where([type="checkbox"]:enabled),
 :where([type="radio"]:enabled),
-:where(summary:not([aria-disabled="true"])),
-:where([role="button"]:not([aria-disabled="true"])) {
+:where(summary),
+:where([role="button"]) {
   cursor: var(--cursor-pointer);
   user-select: none;
 }

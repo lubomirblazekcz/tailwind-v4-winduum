@@ -1,11 +1,12 @@
-.button:is(.ghosted) {
+.button:is(.bordered) {
   --button-disabled-background-color-opacity: 0%;
   --button-disabled-color: var(--color-accent);
   --button-hover-background-color-opacity: 10%;
   --button-hover-color: var(--color-accent);
   --button-active-background-color-opacity: 20%;
   --button-active-color: var(--color-accent);
-  --button-focus-outline-offset: -2px;
-  --button-color: var(--color-accent);
+  --button-focus-outline-offset: 0px;
+  --button-border-width: 1px;
   --button-background-color-opacity: 0%;
+  --button-color: var(--color-accent);
 }

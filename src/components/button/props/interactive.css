@@ -5,5 +5,5 @@
   --button-focus-outline-color-opacity: 50%;
   --button-active-background-color-mix: var(--color-dark);
   --button-active-background-color-opacity: 90%;
-  --button-disabled-opacity: 75%;
+  --button-disabled-background-color-opacity: 75%;
 }
