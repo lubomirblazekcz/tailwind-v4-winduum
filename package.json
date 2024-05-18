@@ -1,11 +1,14 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.0-alpha.14",
-    "tailwindcss": "^4.0.0-alpha.14",
-    "vite": "^5.2.10"
+    "@tailwindcss/vite": "^4.0.0-alpha.15",
+    "@floating-ui/dom": "^1.6.5",
+    "tailwindcss": "^4.0.0-alpha.15",
+    "vite": "^5.2.11"
   }
 }

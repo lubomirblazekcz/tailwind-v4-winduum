@@ -1,0 +1,15 @@
+.popover {
+  background-color: var(--color-body-primary);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid color-mix(in srgb, var(--color-main) 10%, transparent);
+  transition-property: var(--transition-property-default);
+  transition-timing-function: var(--transition-timing-function-in-out);
+  transition-duration: var(--default-transition-duration);
+
+  &:not(.in) {
+    opacity: 0;
+    transform: scale(0.75);
+    pointer-events: none;
+  }
+}

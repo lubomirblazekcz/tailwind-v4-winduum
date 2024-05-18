@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="/src/main.css" />
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body class="p-8 flex flex-col gap-2">
     <div>
@@ -51,6 +52,17 @@
         Button
       </button>
       <button class="button raised" disabled>
+        Button
+      </button>
+    </div>
+    <div class="relative">
+      <button class="button" data-action="popover#show" popovertarget="popover">
+        Button
+      </button>
+      <dialog class="popover absolute" id="popover" popover="manual">
+        <input type="text" autofocus>
+      </dialog>
+      <button class="button raised">
         Button
       </button>
     </div>
