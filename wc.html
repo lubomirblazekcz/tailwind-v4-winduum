@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <x-app class="app contents">
+        <header class="header" is="x-header">
+            <button
+                data-x-drawer-invokeaction="show"
+                data-x-drawer-invoketarget="drawerElement"
+                data-x-app-action="ripple"
+            >Show drawer</button>
+        </header>
+        <main class="main">
+            <section class="hero" is="x-hero">
+                Hero
+            </section>
+            <section class="about">
+                <button
+                    data-x-dialog-invokeaction="show"
+                    data-x-dialog-invoketarget="dialogElement"
+                >Show</button>
+                <dialog class="dialog" is="x-dialog" id="dialogElement">
+                    Dialog
+                </dialog>
+            </section>
+        </main>
+        <x-drawer class="drawer" id="drawerElement">
+            <nav class="nav">
+                Nav
+            </nav>
+        </x-drawer>
+        <footer>
+            Footer
+        </footer>
+    </x-app>
+
+    <x-toaster id="toasterElement" class="contents"></x-toaster>
+</body>
+</html>
