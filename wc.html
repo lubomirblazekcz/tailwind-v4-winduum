@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <x-app class="app contents">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script type="module">
+            customElements.define("x-app", class extends HTMLBodyElement {
+                connectedCallback() {
+                    console.log('x-app')
+                }
+            }, { extends: 'body' })
+
+            customElements.define("x-header", class extends HTMLElement {
+                connectedCallback() {
+                    console.log('x-header')
+                }
+            }, { extends: 'header' })
+        </script>
+    </head>
+    <body is="x-app">
         <header class="header" is="x-header">
             <button
                 data-x-drawer-invokeaction="show"
                 data-x-drawer-invoketarget="drawerElement"
                 data-x-app-action="ripple"
+                data-x-header-click-action="something somethingElse"
+                data-x-app-click-action="ripple"
             >Show drawer</button>
         </header>
         <main class="main">
@@ -25,18 +39,19 @@
                 <dialog class="dialog" is="x-dialog" id="dialogElement">
                     Dialog
                 </dialog>
+                <button
+                    data-x-app-action="fetchDialog"
+                    data-x-app-url-param="/dialog.json"
+                >Fetch dialog</button>
             </section>
         </main>
-        <x-drawer class="drawer" id="drawerElement">
-            <nav class="nav">
-                Nav
-            </nav>
-        </x-drawer>
+        <nav class="nav drawer" id="drawerElement">
+            Nav
+        </nav>
         <footer>
             Footer
         </footer>
-    </x-app>
 
-    <x-toaster id="toasterElement" class="contents"></x-toaster>
-</body>
+        <x-toaster id="toasterElement" class="contents"></x-toaster>
+    </body>
 </html>
