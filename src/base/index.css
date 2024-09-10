@@ -1,5 +1,0 @@
-@import "config.css" layer(theme);
-@import "theme/default.css" layer(theme);
-@import "theme/props.css" layer(theme);
-@import "reset.css" layer(base);
-@import "defaults.css" layer(base);

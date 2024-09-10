@@ -2,67 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="/src/main.css" />
-    <script type="module" src="/src/main.js"></script>
   </head>
   <body class="p-8 flex flex-col gap-2">
     <div>
-      <button class="button">
+      <button class="x-button">
         Button
       </button>
-      <button class="button [--color-accent:var(--color-rose-600)]">
+      <button class="x-button [--color-accent:var(--color-rose-600)]">
         Button
       </button>
-      <button class="button ghosted">
+      <button class="x-button ghosted">
         Button
       </button>
-      <button class="button muted">
+      <button class="x-button muted">
         Button
       </button>
-      <button class="button bordered">
+      <button class="x-button bordered">
         Button
       </button>
-      <button class="button bordered text-main disabled:text-main/75">
+      <button class="x-button bordered text-main disabled:text-main/75">
         Button
       </button>
-      <button class="button raised">
+      <button class="x-button raised">
         Button
       </button>
     </div>
     <div>
-      <button class="button" disabled>
+      <button class="x-button" disabled>
         Button
       </button>
-      <button class="button [--color-accent:var(--color-rose-600)]" disabled>
+      <button class="x-button [--color-accent:var(--color-rose-600)]" disabled>
         Button
       </button>
-      <button class="button ghosted" disabled>
+      <button class="x-button ghosted" disabled>
         Button
       </button>
-      <button class="button muted" disabled>
+      <button class="x-button muted" disabled>
         Button
       </button>
-      <button class="button bordered" disabled>
+      <button class="x-button bordered" disabled>
         Button
       </button>
-      <button class="button bordered text-main disabled:text-main/75" disabled>
+      <button class="x-button bordered text-main disabled:text-main/75" disabled>
         Button
       </button>
-      <button class="button raised" disabled>
-        Button
-      </button>
-    </div>
-    <div class="relative">
-      <button class="button" data-action="popover#show" popovertarget="popover">
-        Button
-      </button>
-      <dialog class="popover absolute" id="popover" popover="manual">
-        <input type="text" autofocus>
-      </dialog>
-      <button class="button raised">
+      <button class="x-button raised" disabled>
         Button
       </button>
     </div>

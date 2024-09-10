@@ -2,8 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Modern Web Components Prototype</title>
+
+        <!-- Safari Polyfill-->
         <script src="https://unpkg.com/@ungap/custom-elements/es.js"></script>
+
         <script type="module">
             customElements.define("x-app", class extends HTMLBodyElement {
                 connectedCallback() {
@@ -18,8 +21,8 @@
             }, { extends: 'header' })
         </script>
     </head>
-    <body is="x-app">
-        <header class="header" is="x-header">
+    <body class="x-app" is="x-app">
+        <header class="x-header" is="x-header">
             <button
                 data-x-drawer-invokeaction="show"
                 data-x-drawer-invoketarget="drawerElement"
@@ -28,16 +31,17 @@
                 data-x-app-click-action="ripple"
             >Show drawer</button>
         </header>
-        <main class="main">
-            <section class="hero" is="x-hero">
+
+        <main class="x-main">
+            <section class="x-hero" is="x-hero">
                 Hero
             </section>
-            <section class="about">
+            <section class="x-about">
                 <button
                     data-x-dialog-invokeaction="show"
                     data-x-dialog-invoketarget="dialogElement"
                 >Show</button>
-                <dialog class="dialog" is="x-dialog" id="dialogElement">
+                <dialog class="x-dialog" is="x-dialog" id="dialogElement">
                     Dialog
                 </dialog>
                 <button
@@ -46,13 +50,15 @@
                 >Fetch dialog</button>
             </section>
         </main>
-        <nav class="nav drawer" id="drawerElement">
-            Nav
-        </nav>
-        <footer>
+
+        <dialog class="x-drawer" id="drawerElement">
+            <nav class="x-nav">Nav</nav>
+        </dialog>
+
+        <footer class="x-footer">
             Footer
         </footer>
 
-        <x-toaster id="toasterElement" class="contents"></x-toaster>
+        <x-toaster id="toasterElement"></x-toaster>
     </body>
 </html>
