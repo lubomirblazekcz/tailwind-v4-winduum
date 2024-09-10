@@ -1,4 +1,3 @@
-@layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "winduum/src/base/theme/default-tw.css" layer(theme);
 @import "winduum/src/base/config/mask.css" layer(theme);
