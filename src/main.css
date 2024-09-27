@@ -1,8 +1,8 @@
+@layer theme, base, components, utilities;
+
 @import "tailwindcss/theme.css" layer(theme);
-@import "winduum/src/base/theme/default-tw.css" layer(theme);
-@import "winduum/src/base/config/mask.css" layer(theme);
-@import "winduum/src/base/config/transition.css" layer(theme);
-@import "winduum/src/base/config/tw.css" layer(theme);
+@import "winduum/tailwindcss/theme/config/index.css" layer(theme);
+@import "winduum/tailwindcss/theme/default.css" layer(theme);
 @import "winduum/src/base/reset.css" layer(base);
 @import "winduum/src/base/defaults.css" layer(base);
 @import "winduum/src/components/button/index.css" layer(components);
