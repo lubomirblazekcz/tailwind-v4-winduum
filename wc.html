@@ -24,11 +24,11 @@
     <body class="x-app" is="x-app">
         <header class="x-header" is="x-header">
             <button
-                data-x-drawer-invokeaction="show"
-                data-x-drawer-invoketarget="drawerElement"
-                data-x-app-action="ripple"
-                data-x-header-click-action="something somethingElse"
-                data-x-app-click-action="ripple"
+                data-x-drawer-command="show"
+                data-x-drawer-commandfor="drawerElement"
+                data-x-app-command="ripple"
+                data-x-header-click-command="something somethingElse"
+                data-x-app-click-command="ripple"
             >Show drawer</button>
         </header>
 
@@ -38,15 +38,16 @@
             </section>
             <section class="x-about">
                 <button
-                    data-x-dialog-invokeaction="show"
-                    data-x-dialog-invoketarget="dialogElement"
+                    data-x-dialog-command="show"
+                    data-x-dialog-commandfor="dialogElement"
                 >Show</button>
                 <dialog class="x-dialog" is="x-dialog" id="dialogElement">
                     Dialog
                 </dialog>
                 <button
-                    data-x-app-action="fetchDialog"
+                    data-x-app-command="fetchDialog"
                     data-x-app-url-param="/dialog.json"
+                    data-x-app-part="button"
                 >Fetch dialog</button>
             </section>
         </main>

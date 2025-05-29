@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modern Web Components Prototype</title>
+
+        <!-- Safari Polyfill-->
+        <script src="https://unpkg.com/@ungap/custom-elements/es.js"></script>
+        <script src="https://unpkg.com/invokers-polyfill@latest/invoker.min.js" type="module" async></script>
+
+        <script type="module">
+            const superConnect = (self) => {
+                self.addEventListener("command", e => {
+                    const method = e.command.slice(2)
+                    //    .replace(/(-\w)/g, c => c[1].toUpperCase())
+
+                    if (method in self) self[method](e)
+                })
+            }
+
+            customElements.define("x-app", class extends HTMLBodyElement {
+                static parts = ['ripple', 'infoButton']
+
+                connectedCallback() {
+                    superConnect(this)
+                    console.log('x-app')
+                }
+
+                showInfo({ source }) {
+                    console.log(source.value)
+                }
+            }, { extends: 'body' })
+
+            customElements.define("x-header", class extends HTMLElement {
+                static parts = ['button']
+
+                connectedCallback() {
+                    superConnect(this)
+                    console.log('x-header')
+                }
+            }, { extends: 'header' })
+        </script>
+    </head>
+    <body class="x-app" is="x-app" id="x-app">
+        <header class="x-header" is="x-header">
+            <button
+                command="--show"
+                commandfor="drawerElement"
+                data-x-app-part="ripple"
+                data-x-header-part="button"
+            >Show drawer</button>
+        </header>
+
+        <main class="x-main">
+            <section class="x-hero" is="x-hero">
+                Hero
+            </section>
+            <section class="x-about">
+                <button
+                    command="--show"
+                    commandfor="dialogElement"
+                >Show</button>
+                <dialog class="x-dialog" is="x-dialog" closedby="any" id="dialogElement">
+                    Dialog
+                </dialog>
+                <button
+                    data-x-app-part="infoButton"
+                    type="button"
+                    command="--showInfo"
+                    commandfor="x-app"
+                    value="My info message"
+                >Show info</button>
+                <button
+                    type="button"
+                    command="--x-dialog#showModal"
+                    commandfor="x-app"
+                    value="/dialog.json"
+                >Fetch dialog</button>
+            </section>
+        </main>
+
+        <dialog class="x-drawer" id="drawerElement" closedby="any">
+            <nav class="x-nav">Nav</nav>
+        </dialog>
+
+        <footer class="x-footer">
+            Footer
+        </footer>
+
+        <x-toaster id="toasterElement"></x-toaster>
+    </body>
+</html>
